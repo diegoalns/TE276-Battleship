@@ -56,13 +56,20 @@ def get_damage(
 
     # Compute distance from ship to hazard
     # <!!! INSERT YOUR CODE HERE !!!>
+    # Aqui foi utilizada a função get_distance que está definida em battleship.utils
+    distance_ship_to_Hazard = get_distance(ship_position, hazard_position)
 
     # Check if ship is safe from hazard
     # <!!! INSERT YOUR CODE HERE !!!>
-
+    if distance_ship_to_Hazard > hazard.safe_dist:
+        return 0
+    else:
+        
     # Compute the actual damage
     # <!!! INSERT YOUR CODE HERE !!!>
 
+        damage = (hazard.safe_dist - distance_ship_to_Hazard)/hazard.safe_dist
+
     # Return the damage you computed
     # <!!! REPLACE THE LINE BELLOW WITH YOUR OWN !!!>
-    return 0
+        return damage
