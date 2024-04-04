@@ -64,12 +64,14 @@ def get_damage(
     if distance_ship_to_Hazard > hazard.safe_dist:
         return 0
     else:
-        
-    # Compute the actual damage
-    # <!!! INSERT YOUR CODE HERE !!!>
 
-        damage = (hazard.safe_dist - distance_ship_to_Hazard)/hazard.safe_dist
+        # Compute the actual damage
+        # <!!! INSERT YOUR CODE HERE !!!>
+        # Aqui foi criada a variável damage, onde são utilizadas a hazard.safe distance que é definida na criação da entidade
+        # e a distance_ship_to_hazard que foi calculada dentro da prória função get_damage()
 
-    # Return the damage you computed
-    # <!!! REPLACE THE LINE BELLOW WITH YOUR OWN !!!>
+        damage = (hazard.safe_dist - distance_ship_to_Hazard) / hazard.safe_dist
+
+        # Return the damage you computed
+        # <!!! REPLACE THE LINE BELLOW WITH YOUR OWN !!!>
         return damage
